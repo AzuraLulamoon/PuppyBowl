@@ -70,13 +70,15 @@ async function renderSinglePlayer(id) {
     const singlePlayer = await fetchSinglePlayer(id);
 
     let playerDetails = document.createElement("div");
+    playerDetails.className = 'detailPage'
     playerDetails.innerHTML = 
-    `<img id="pupImg" src=${singlePlayer.imageUrl}/>
+    `<img id="pupImg2" src=${singlePlayer.imageUrl}>
     <h3>${singlePlayer.name}</h3>
     <p>${singlePlayer.breed}</p>
     <p>${singlePlayer.status}</p>`;
 let closeButton = document.createElement("button");
 closeButton.innerHTML = 'back'
+closeButton.className = 'clickers'
 closeButton.addEventListener('click', () => {
     renderPlayers();
 })
@@ -87,13 +89,16 @@ playerDetails.appendChild(closeButton);
 const renderForm = (playerObj) => {
     try {
     newPlayerFormContainer.innerHTML =
-    `<h3>Create a Player</h3>
-    <input type="text" id="name" name="Name" placeholder="Name"/>
-    <input type="text" id="breed" name="Breed" placeholder="Breed"/>`;
+    `<h1 id="headerCard">Welcome to PuppyBowl!</h1>
+    <h3 class ="formPlayer" id="cPlayer">Create a Player</h3>
+    <input class ="inputs" type="text" id="name" name="Name" placeholder="Name"/>
+    <input class="inputs" type="text" id="breed" name="Breed" placeholder="Breed"/>`;
     // <input type="text" id="status" name="Status" placeholder="Status"/>
 
     let submitButton = document.createElement('button');
     submitButton.innerHTML = 'Create';
+    submitButton.className = 'clickers';
+    submitButton.id = 'submitClick'
     submitButton.addEventListener('click', () => {
         const newPlayer = {
             name: document.getElementById('name').value,

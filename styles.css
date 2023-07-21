@@ -8,13 +8,19 @@ body {
 }
 #pupImg {
   width: 200px;
+  border: solid 2px;
 }
 #all-players-container {
+  position: relative;
+  top: 40px;
+  left: 120px;
   display: flex;
+  flex-wrap: wrap;
   text-align: center;
   gap: 50px;
 }
 .singlePlayer {
+  background-color: aliceblue;
   border: solid;
   border-style: double;
   padding: 10px;
@@ -24,4 +30,35 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 10px;
+}
+.detailPage {
+  border: solid;
+  border-style: double;
+  padding: 10px;
+  background-color: aliceblue;
+  position: absolute;
+  left: 550px;
+}
+#pupImg2 {
+  width: 450px;
+}
+#new-player-form {
+  background-color: aliceblue;
+  position: relative;
+  border-bottom: solid;
+  border-width: 3px;
+  padding-left: 30px;
+}
+.formPlayer {
+  position: absolute;
+  top: 10px;
+  left: 32px;
+}
+.inputs {
+  padding: 10px;
+}
+#headerCard {
+  text-align: center;
+  position: relative;
+  top: 24px;
 }
