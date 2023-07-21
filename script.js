@@ -44,12 +44,14 @@ async function renderPlayers() {
 
     let deleteButton = document.createElement('button');
     deleteButton.innerHTML = 'Delete'
+    deleteButton.className = 'clickers'
     deleteButton.addEventListener('click', async () => {
         await deletePlayer(player.id)
     })
 
     let detailButton = document.createElement("button");
     detailButton.innerHTML = 'Details'
+    detailButton.className = 'clickers'
     detailButton.addEventListener('click', async (event) => {
         console.log('detail list');
         renderSinglePlayer(player.id);
